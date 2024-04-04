@@ -1,5 +1,6 @@
 clear; clc; close all;
-addpath("ustb")
+addpath("ustb");
+addpath("k-Wave");
 %%
 DATA_CAST = 'gpuArray-single'; %gpuArray- 
 RUN_SIMULATION  = true;
