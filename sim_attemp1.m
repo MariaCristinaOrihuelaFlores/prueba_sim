@@ -122,7 +122,7 @@ source.u_mode ='dirichlet';
 input_args = {'PMLInside', false, 'PMLSize', PML_size,'DataCast',DATA_CAST, 'PlotPML', false, 'Smooth', false};
     
 % run the simulation
-sensor_data(:,:,1) = permute(kspaceFirstOrder2DG(kgrid, medium, source, sensor, input_args{:}),[2 1]);
+sensor_data(:,:,1) = permute(kspaceFirstOrder2D(kgrid, medium, source, sensor, input_args{:}),[2 1]);
 %% 
 sensor_data(isnan(sensor_data))=0;
 element_data=zeros(numel(kgrid.t_array),prb.N_elements,numel(seq));
